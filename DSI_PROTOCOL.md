@@ -111,7 +111,18 @@ When the LLM encounters a DSI index and needs detailed information:
 
 ---
 
-## 7. Empirical Proofs (DSI NIAH Verification)
+## 7. Recursive Indexing (Scaling Beyond Context Limits)
+
+As a project grows to millions of events, even the DSI Index itself may exceed the LLM's per-file read limit (e.g., 10,000 tokens). To maintain $O(1)$ scaling, DSI supports **Tiered Meta-Indexing**.
+
+### Rules for Large Indices:
+1. **Tier 1 (Main Index):** If `DSI_INDEX.md` exceeds 10k tokens, split it into chronological parts (e.g., `DSI_INDEX_2024.md`, `DSI_INDEX_2025.md`).
+2. **Meta-Index:** Maintain a tiny top-level pointer file that tells the agent which sub-index to read based on the entity or date range.
+3. **Surgical Reading:** Alternatively, teach the agent to use `grep` or `read_file_range` to scan large indices without loading the full file.
+
+---
+
+## 8. Empirical Proofs (DSI NIAH Verification)
 
 DSI has been rigorously stress-tested against the **Needle-In-A-Haystack (NIAH)** benchmark to verify its recall accuracy and compression efficiency at scale.
 
