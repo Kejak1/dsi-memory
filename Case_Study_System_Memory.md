@@ -8,11 +8,11 @@
 
 ## 🔥 The Problem: Context Bloat
 Before distillation, our "System HOT Memory" consisted of:
-1. `harness_memory.json` (7,500 tokens) - All project history and agent notes.
-2. `skills.json` (43,000 tokens) - Full multi-paragraph definitions for 114+ skills.
-3. `AGENTS.md` (8,700 tokens) - 25 dense protocols and architectural manifests.
+1. **System State Manifest** (7,500 tokens) - All project history and agent state metadata.
+2. **Skill Registry** (43,000 tokens) - Full multi-paragraph definitions for 114+ skills.
+3. **Core Identity Manifest** (8,700 tokens) - Dense protocols and architectural rules.
 
-**Total Boot Cost**: ~61,000 tokens ($0.18 per session start).
+**Total Boot Cost**: ~61,000 tokens per session start.
 
 ---
 
@@ -21,23 +21,23 @@ Before distillation, our "System HOT Memory" consisted of:
 We applied the DSI "Drawer" paradigm to the system level:
 
 ### 1. Skills Distillation (89% Reduction)
-- **HOT (`skills.json`)**: Stripped examples, pro-tips, and complex chain-logic. Retained only metadata and triggers.
-- **COLD (`skills_COOLDOWN.json`)**: Full verbatim definitions stored for on-demand retrieval.
+- **Active Registry**: Stripped examples, pro-tips, and complex chain-logic. Retained only metadata and triggers.
+- **Archived Definitions**: Full verbatim definitions stored for on-demand retrieval in the Cold Layer.
 - **Result**: 43,031 tokens → **19,749 tokens**.
 
-### 2. Protocol Archival
-- **HOT (`AGENTS.md`)**: Retained Protocols 1-11 (Identity and Core Sync).
-- **COLD (`protocols/*.md`)**: Moved high-efficiency Protocols 12-25 to individual "drawers".
+### 2. Identity Archival
+- **Core Identity**: Retained essential persona and sync protocols in the active context.
+- **Advanced Protocols**: Moved complex architectural and domain-specific rules to individual archival "drawers".
 - **Result**: Replaced 2,000 lines of text with a 15-line DSI Index table.
 
-### 3. Harness Memory Sharding
-- **HOT (`harness_memory.json`)**: Kept only the `active_project`, `hardware_build`, and running `agent_states`.
-- **COLD (`harness_COLD.json`)**: Moved historical notes, archived projects, and skill artifacts to cold storage.
-- **Pointer Paradigm**: Non-active projects in the HOT file now look like this:
+### 3. Context Sharding
+- **State Manifest**: Kept only the active project status and running agent states.
+- **Global Archive**: Moved historical project notes and skill execution artifacts to cold storage.
+- **Pointer Paradigm**: Non-active projects in the active manifest now look like this:
   ```json
   "Project_X": {
       "status": "archived",
-      "dsi_ref": "cold_storage/system/harness_COLD.json#projects_archived.Project_X"
+      "dsi_ref": "cold_storage/system/state_ARCHIVE.json#projects.Project_X"
   }
   ```
 
@@ -48,11 +48,11 @@ We applied the DSI "Drawer" paradigm to the system level:
 | Metric | Before | After | Improvement |
 |--------|--------|-------|-------------|
 | **Total Boot Tokens** | ~61,031 | ~32,656 | **-46%** |
-| **System Identity File** | 8,735 | 9,069* | (+4% for index safety) |
+| **Identity Manifest** | 8,735 | 9,069* | (+4% for index safety) |
 | **Active Project Load** | 7,515 | 1,595 | **-78%** |
 | **Skill Registry** | 43,031 | 19,749 | **-54%** |
 
-*\*Note: AGENTS.md grew slightly to ensure the DSI Index was robust enough for zero-search retrieval.*
+*\*Note: The manifest grew slightly to ensure the DSI Index was robust enough for zero-search retrieval.*
 
 ### Bottom Line
-By applying DSI to our own memory, we reclaimed **~28,000 tokens** per session. In a 10-prompt conversation, this translates to **$0.84 saved per chat**, while maintaining 100% recall of archived protocols and historical projects via deterministic pointer routing.
+By applying DSI to the core system memory, we reclaimed **~28,000 tokens** per session. This ensures that the agent maintains 100% recall of archived rules and historical project data via deterministic pointer routing, without sacrificing active reasoning space.
