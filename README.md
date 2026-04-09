@@ -217,6 +217,8 @@ Drop-in system prompt configurations for popular AI tools:
 
 ---
 
+---
+
 ## 🆚 DSI vs Traditional Approaches
 
 | Feature | DSI | RAG (Vector DB) | Raw Context | MemPalace |
@@ -228,6 +230,16 @@ Drop-in system prompt configurations for popular AI tools:
 | Monthly Cost | $0 | $25-500+ | $0 | $0 |
 | Context Preservation | 100% (verbatim cold storage) | ~60% (chunking destroys context) | 100% | ~90% |
 | Works Offline | ✅ | ❌ | ✅ | ✅ |
+
+### DSI vs. MemPalace: The Zero-Infrastructure Edge
+
+While systems like **MemPalace** offer powerful memory abstractions, DSI is built for **architectural autonomy** and **zero dependencies**.
+
+- **Language Agnostic**: DSI works in ANY language or IDE. No Python runtime required.
+- **Native FS Speed**: DSI uses the Operating System's file system as its primary database. Retrieval is a native $O(1)$ file operation.
+- **Byte-Perfect Recall**: DSI never probabilistically retrieves "similar" facts. It fetches the exact verbatim text you stored, preventing semantic drift.
+
+---
 
 ---
 
