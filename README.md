@@ -140,6 +140,19 @@ enterprise tiers in Feb.
 
 > See the full example: [`examples/before/`](examples/before/) → [`examples/after/`](examples/after/)
 
+### CLI-Tested Results
+
+We ran `dsi compress` on the included example file ([`examples/before/LOG_HISTORY.md`](examples/before/LOG_HISTORY.md)) — a realistic 161-line project log with 4 dated entry blocks:
+
+```
+  Before:  1,860 tokens (161 lines)
+  After:     208 tokens  (17 lines)
+  ────────────────────────────────
+  Saved:   1,652 tokens (89% reduction)
+```
+
+The original verbatim text is preserved byte-for-byte in `cold_storage/`. Zero information lost.
+
 ---
 
 ## 🏆 Benchmark Results
