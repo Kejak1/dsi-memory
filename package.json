@@ -1,0 +1,38 @@
+{
+  "name": "dsi-memory",
+  "version": "1.0.0",
+  "description": "Dense Sourced Index — Zero-DB Agent Memory for LLMs. Compress verbose logs into deterministic pointer indexes with cold storage archival.",
+  "main": "bin/dsi.js",
+  "bin": {
+    "dsi": "bin/dsi.js",
+    "dsi-memory": "bin/dsi.js"
+  },
+  "keywords": [
+    "llm",
+    "memory",
+    "agent",
+    "rag",
+    "context",
+    "compression",
+    "ai",
+    "claude",
+    "gpt",
+    "cursor",
+    "dense-sourced-index"
+  ],
+  "author": "Maris",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kejak1/dsi-memory.git"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "files": [
+    "bin/",
+    "README.md",
+    "DSI_PROTOCOL.md",
+    "LICENSE"
+  ]
+}
