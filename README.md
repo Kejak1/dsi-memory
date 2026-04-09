@@ -169,6 +169,8 @@ The example above is small. Here's what DSI does on a production codebase after 
 > **The math:** At Claude/GPT-4 input pricing (~$3/1M tokens), a 6-month project burns **~75,000 tokens just reading its own history** on every single prompt. That's $0.22 per prompt doing nothing but remembering. Over 100 daily prompts across a team, that's **$660/month in pure waste** — before the LLM even starts thinking about your actual question.
 >
 > With DSI, the same project loads **1,800 tokens** of compressed pointers. The LLM only pays for cold storage retrieval when it actually needs a specific historical detail.
+>
+> 🧠 **Case Study**: [Distilling an Agent's Own "Brain"](Case_Study_System_Memory.md) — How we reduced an AI's boot sequence overhead by **46%** (saving 28k tokens per session).
 
 ---
 
