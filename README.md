@@ -185,7 +185,8 @@ Performance analysis based on DSI's deterministic architecture:
 | **Abstention** | 100% | If no DSI pointer exists for a topic, the agent knows it has no data — zero hallucination risk. |
 
 ### CLI-Verified Performance
-- ✅ **Token reduction**: 99.95% on server logs (198k → 101 tokens).
+- ✅ **Massive Scale**: 98.5% compression on 68M token dataset (Reduced to 995k tokens).
+- ✅ **Server Logs**: 99.95% reduction (198k → 101 tokens).
 - ✅ **Context preservation**: 100% — cold storage contains byte-for-byte verbatim original text.
 - ✅ **Retrieval accuracy**: 100% — deterministic file paths, not probabilistic vector search.
 
