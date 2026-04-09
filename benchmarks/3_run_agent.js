@@ -24,7 +24,7 @@ if (!fs.existsSync(DATASET_FILE)) {
   process.exit(1);
 }
 
-const MODEL = isOllama ? 'qwen2.5:0.5b' : 'gemini-1.5-flash';
+const MODEL = isOllama ? 'qwen2.5:3b' : 'gemini-1.5-flash';
 const dataset = JSON.parse(fs.readFileSync(DATASET_FILE, 'utf8'));
 const targetData = isTestRun ? dataset.slice(0, 5) : dataset;
 
