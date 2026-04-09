@@ -34,5 +34,17 @@
     "README.md",
     "DSI_PROTOCOL.md",
     "LICENSE"
-  ]
+  ],
+  "scripts": {
+    "bench:download": "node benchmarks/1_download.js",
+    "bench:build": "node benchmarks/2_build_dsi_index.js",
+    "bench:run": "node benchmarks/3_run_agent.js",
+    "bench:grade": "node benchmarks/4_evaluate.js",
+    "bench:run:ollama": "node benchmarks/3_run_agent.js --ollama",
+    "bench:grade:ollama": "node benchmarks/4_evaluate.js --ollama"
+  },
+  "devDependencies": {
+    "@google/genai": "^1.49.0",
+    "dotenv": "^17.4.1"
+  }
 }
