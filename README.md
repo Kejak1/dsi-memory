@@ -217,27 +217,17 @@ Drop-in system prompt configurations for popular AI tools:
 
 ---
 
----
-
 ## 🆚 DSI vs Traditional Approaches
 
-| Feature | DSI | RAG (Vector DB) | Raw Context | MemPalace |
-|--------|-----|-----------------|-------------|-----------|
-| Infrastructure | None (files only) | Pinecone/Chroma + embeddings | None | Python framework |
-| Retrieval Accuracy | 100% (deterministic) | ~80% (probabilistic) | 100% (but token-limited) | ~95% |
-| Token Efficiency | 99%+ reduction | ~60% reduction | 0% (everything loaded) | ~80% reduction |
-| Setup Time | 30 seconds | 2-4 hours | 0 | 30-60 minutes |
-| Monthly Cost | $0 | $25-500+ | $0 | $0 |
-| Context Preservation | 100% (verbatim cold storage) | ~60% (chunking destroys context) | 100% | ~90% |
-| Works Offline | ✅ | ❌ | ✅ | ✅ |
-
-### DSI vs. MemPalace: The Zero-Infrastructure Edge
-
-While systems like **MemPalace** offer powerful memory abstractions, DSI is built for **architectural autonomy** and **zero dependencies**.
-
-- **Language Agnostic**: DSI works in ANY language or IDE. No Python runtime required.
-- **Native FS Speed**: DSI uses the Operating System's file system as its primary database. Retrieval is a native $O(1)$ file operation.
-- **Byte-Perfect Recall**: DSI never probabilistically retrieves "similar" facts. It fetches the exact verbatim text you stored, preventing semantic drift.
+| Feature | DSI | RAG (Vector DB) | Raw Context |
+|--------|-----|-----------------|-------------|
+| Infrastructure | None (files only) | Pinecone/Chroma + embeddings | None |
+| Retrieval Accuracy | 100% (deterministic) | ~80% (probabilistic) | 100% (but token-limited) |
+| Token Efficiency | 99%+ reduction | ~60% reduction | 0% (everything loaded) |
+| Setup Time | 30 seconds | 2-4 hours | 0 |
+| Monthly Cost | $0 | $25-500+ | $0 |
+| Context Preservation | 100% (verbatim cold storage) | ~60% (chunking destroys context) | 100% |
+| Works Offline | ✅ | ❌ | ✅ |
 
 ---
 
