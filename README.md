@@ -210,8 +210,8 @@ Drop-in system prompt configurations for popular AI tools:
 | Feature | DSI | RAG (Vector DB) | Raw Context | MemPalace |
 |--------|-----|-----------------|-------------|-----------|
 | Infrastructure | None (files only) | Pinecone/Chroma + embeddings | None | Python framework |
-| Retrieval Accuracy | 99% (deterministic) | ~80% (probabilistic) | 100% (but token-limited) | ~95% |
-| Token Efficiency | ~85% reduction | ~60% reduction | 0% (everything loaded) | ~80% reduction |
+| Retrieval Accuracy | 100% (deterministic) | ~80% (probabilistic) | 100% (but token-limited) | ~95% |
+| Token Efficiency | 99%+ reduction | ~60% reduction | 0% (everything loaded) | ~80% reduction |
 | Setup Time | 30 seconds | 2-4 hours | 0 | 30-60 minutes |
 | Monthly Cost | $0 | $25-500+ | $0 | $0 |
 | Context Preservation | 100% (verbatim cold storage) | ~60% (chunking destroys context) | 100% | ~90% |
