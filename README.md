@@ -202,9 +202,16 @@ Performance analysis based on DSI's deterministic architecture:
 ### CLI-Verified Performance
 - ✅ **Extreme Scale NIAH Proof**: 1,955,507 tokens raw logs $\to$ 20,251 tokens total cost to retrieve 1 unique secret (99% reduction).
 - ✅ **BPE-Verified Massive Scale**: 99.89% exact token reduction on Stanford Alpaca 52K dataset (4.85 Million raw tokens → 4,932 index tokens).
-- ✅ **Server Logs**: 99.74% reduction (38k → 101 tokens).
+- ✅ **Legacy Distillation**: Successfully reclaimed **22,000 tokens** from a mature codebase by offloading static 50KB architecture specs to the Cold Tier.
 - ✅ **Context preservation**: 100% — cold storage contains byte-for-byte verbatim original text.
 - ✅ **Retrieval accuracy**: 100% — deterministic file paths, not probabilistic vector search.
+
+---
+
+## 🌎 Real-World Case Studies
+
+1. [**Distilling an Agent's Own "Brain"**](Case_Study_System_Memory.md): How we reduced an AI's boot sequence overhead by **46%** (saving 28k tokens per session).
+2. [**Reclaiming Reasoning Space**](Case_Study_Legacy_Distillation.md): How we offloaded 6 months of stagnant documentation to create headroom for deep coding.
 
 
 
