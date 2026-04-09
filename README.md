@@ -174,17 +174,6 @@ The example above is small. Here's what DSI does on a production codebase after 
 
 ---
 
-## 📖 Theoretical Proofs & Computer Science Foundations
-
-Are you looking for the hard math on why DSI scales infinitely while RAG degrades?
-
-We have published the [**Theoretical Architecture & Proofs (ARCHITECTURE.md)**](ARCHITECTURE.md) document which formally details:
-- **Asymptotic Complexity:** Why vector retrieval is $O(N)$ while DSI file routing acts as an $O(1)$ Hash Map.
-- **Information Theory:** Proof that DSI chunking preserves Shannon Entropy losslessly, preventing "lost in the middle" degradation.
-- **Deterministic Resolution:** Mathematical guarantee of 100% false-positive elimination.
-
----
-
 ## 🏆 Efficiency & Recall Analysis
 
 Performance analysis based on DSI's deterministic architecture:
